@@ -51,7 +51,11 @@ nav a:hover { text-shadow: 0 0 8px var(--shadow); }
   font-weight: 600;
   transition: 0.3s;
 }
-.pill:hover { background: #fff; color: var(--black); }
+.pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(212,175,55,.25);
+  transition: 0.3s;
+}
 
 /* Layout wrappers */
 .wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
