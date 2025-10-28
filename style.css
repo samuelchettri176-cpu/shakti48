@@ -1,0 +1,64 @@
+/* === Smooth Scrolling + Gold Theme === */
+:root {
+  --header-h: 72px;
+  --gold: #d4af37;
+  --black: #0d0d0d;
+  --text: #eaeaea;
+  --shadow: rgba(212,175,55,0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* Base body */
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings + gold glow */
+h1, h2, h3 {
+  color: var(--gold);
+  text-shadow: 0 0 12px var(--shadow);
+}
+
+/* Links + navigation */
+nav a {
+  color: var(--gold);
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+nav a:hover { text-shadow: 0 0 8px var(--shadow); }
+
+/* Pills (buttons) */
+.pill {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.pill:hover { background: #fff; color: var(--black); }
+
+/* Layout wrappers */
+.wrap { max-width: 900px; margin: 0 auto; padding: 20px; }
+.section { margin-top: 30px; }
+
+/* Top link */
+.pill.secondary.toplink { opacity:.9; }
+
+/* Footer */
+footer { text-align: center; padding: 30px 0; color: var(--gold); }
